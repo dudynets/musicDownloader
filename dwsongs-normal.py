@@ -79,12 +79,6 @@ config = {
 
 acrcloud = ACRcloud(config)
 
-logging.basicConfig(
-	filename = "dwsongs.log",
-	level = logging.WARNING,
-	format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
-
 if not os.path.isdir(loc_dir):
 	os.makedirs(loc_dir)
 
