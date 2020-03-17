@@ -79,6 +79,12 @@ config = {
 
 acrcloud = ACRcloud(config)
 
+logging.basicConfig(
+	filename = "dwsongs.log",
+	level = logging.WARNING,
+	format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+
 if not os.path.isdir(loc_dir):
 	os.makedirs(loc_dir)
 
@@ -912,7 +918,7 @@ def Link(link, chat_id, quality, message_id):
 		logging.warning(link)
 
 		sendMessage(
-			chat_id, "OPS :( Something went wrong. Please send to @dudynets this link: {} {}, if this happens again".format(link, quality)
+			chat_id, "OPS :( Something went wrong please send to @An0nimia this link: {} {}, if this happens again".format(link, quality)
 		)
 
 	if done == 1:
@@ -926,7 +932,7 @@ def Link(link, chat_id, quality, message_id):
 		]
 
 		sendMessage(
-			chat_id, "FINISHED",
+			chat_id, "FINISHED :) Rate me here https://t.me/BotsArchive/298",
 			reply_to_message_id = message_id,
 			reply_markup = InlineKeyboardMarkup(keyboard)
 		)
